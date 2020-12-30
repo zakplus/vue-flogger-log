@@ -1,0 +1,41 @@
+{
+  "name": "vue-flogger-log",
+  "version": "1.0.0",
+  "description": "A Vue.js plugin for flogger-log",
+  "main": "dist/index.js",
+  "scripts": {
+    "pretest": "babel test --out-dir build-test",
+    "test": "tape build-test/**/*.test.js | tap-spec",
+    "lint": "eslint .",
+    "prebuild": "npm run lint",
+    "build": "babel src --out-dir dist",
+    "postbuild": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zakplus/vue-flogger-log.git"
+  },
+  "keywords": [
+    "Vue",
+    "flogger-log",
+    "logging"
+  ],
+  "author": "Valerio Bianchi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zakplus/vue-flogger-log/issues"
+  },
+  "homepage": "https://github.com/zakplus/vue-flogger-log#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "7.12.10",
+    "@babel/core": "7.12.10",
+    "@babel/preset-env": "7.12.11",
+    "eslint": "7.16.0",
+    "eslint-config-airbnb-base": "14.2.1",
+    "eslint-plugin-import": "2.22.1",
+    "flogger-log": "1.2.0",
+    "tap-spec": "5.0.0",
+    "tape": "5.1.0"
+  }
+}
